@@ -1,12 +1,7 @@
-local t=Def.ActorFrame{};
-
-t[#t+1] = Def.ActorFrame{
-	LoadActor("TimerLabel (doubleres)") .. {
+return Def.ActorFrame {
+	LoadActor("TimerLabel (doubleres).png")..{
 		OnCommand=function(self)
-			self:SetTextureFiltering(false):addy(-38);
+			self:SetTextureFiltering(false):addy(-27)
 		end,
-	};
-};
-
-
-return t;
+	}
+}

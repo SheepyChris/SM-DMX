@@ -100,7 +100,7 @@ end
 
 -- Manages banner on sprite
 local function UpdateBanner(self, Song)
-    self:LoadFromSongBanner(Song):scaletoclipped(WheelItem.Width, WheelItem.Height)
+    self:LoadFromSongBackground(Song):scaletoclipped(WheelItem.Width, WheelItem.Height)
 end
 
 local t = Def.ActorFrame {
@@ -238,7 +238,7 @@ for i = 1, WheelSize do
              -- Restore shadow
             self:GetChild("Banner"):linear(0.1):shadowcolor(color("#00000077"))
             
-            self:GetChild("Index"):playcommand("Refresh")
+            --self:GetChild("Index"):playcommand("Refresh")
         end,
 
         Def.Banner {
