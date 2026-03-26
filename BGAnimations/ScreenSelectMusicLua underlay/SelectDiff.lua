@@ -34,6 +34,7 @@ local function InputHandler(event)
         elseif button == "Start" or button == "MenuStart" or button == "Center" then
             if ChartIndex >= 3 then
                 MESSAGEMAN:Broadcast("SongUnchosen")
+                MESSAGEMAN:Broadcast("UpdateChartDisplay")
             else
                 SCREENMAN:GetTopScreen():StartTransitioningScreen("SM_GoToNextScreen")
             end

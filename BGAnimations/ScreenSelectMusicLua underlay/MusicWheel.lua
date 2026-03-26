@@ -85,6 +85,9 @@ local function InputHandler(event)
 			MESSAGEMAN:Broadcast("Scroll", { Direction = 1 })
 			
 		elseif button == "Start" or button == "MenuStart" or button == "Center" then
+            -- Filter repeated input to avoid getting stuck
+            if event.type == "InputEventType_Repeat" then return end
+            
 			-- Save this for later
 			LastSongIndex = SongIndex
 			
